@@ -22,20 +22,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>
-                <h1 class="large light text-shadow-small">ED's BURGERS</h1>
-            </li>
-        </ul>
-    </nav>
-    <main>
+    <div class="nav-container">
+        <nav>
+            <ul>
+                <li class="nav-left">
+                    <h1 class="large light text-shadow-small">ED's BURGERS</h1>
+                </li>
 
+                <div class="hideable-content-nav">
+                    <li class="nav-right nav-interactable">
+                        <a href="https://www.google.se" target="blank" class="light small-text text-shadow-small link">ABOUT</a>
+                    </li>
+                    <li class="nav-right nav-interactable">
+                        <a href="https://www.google.se" target="blank" class="light small-text text-shadow-small link">CONTACT</a>
+                    </li>
+                </div>
+                <!-- <img class="hamburger-button" src="images/HamburgerButton.png" alt=""> -->
+                <svg viewBox="0 0 110 60" width="40" height="40" class="hamburger-button">
+                    <rect y="0"  width="100" height="5" class="hamburger-segment delay-1"></rect>
+                    <rect y="30" width="100" height="5" class="hamburger-segment delay-2"></rect>
+                    <rect y="60" width="100" height="5" class="hamburger-segment delay-3"></rect>
+                </svg>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
         <div class="grid-container">
-            <p>MENU</p>
-            <p>WHERE ARE WE LOCATED</p>
-            <div class="text-container">
-                <p class="inverted-text">CONTACT</p>
+            <p class="large-text pos-top main-grid-text">Hi, I'm Ed.</p>
+        
+            <div class="subgrid-2">
+                <div class="text-container">
+                    <p class="inverted-text">MENU</p>
+                </div>
+                <div class="text-container centered blurred-button">
+                    <p class="light-text">CHEFS</p>
+                </div>
             </div>
         </div>
 

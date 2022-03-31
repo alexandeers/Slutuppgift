@@ -12,6 +12,14 @@ body {
     background: var(--white);
     font-family: 'Oswald', sans-serif;
     color: white;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    transition: 0.25s ease-out;
 }
 
 main {

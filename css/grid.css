@@ -1,29 +1,133 @@
 .grid-container {
+    /* Init */
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 2em;
+    grid-template-rows: repeat(3, minmax(0px,  auto));
+    gap: 0.5em;
 
+    /* Positioning */
     margin: auto;
     margin-left: 20%;
     padding: auto;
     justify-content: center;
     align-self: center;
+
+    /* Text styling */
+    font-size: clamp(2.5rem, 1.5vw, 3rem); 
+    font-weight: lighter;
+}
+
+.subgrid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
 }
 
 .text-container {
+    /* Init */
     background: transparent center;
     background-size: contain;
+
+    /* Positioning */
     margin: 0;
     padding: 0;
+
+    /* Text styling */
+    font-weight: normal;
 }
 
+/*////////////////////////////////////////////  
+                SPECIAL CLASSES
+////////////////////////////////////////////*/
+
 .inverted-text {
+    /* Init */
     color: black;
-    border: 4px solid;
     background: white;
     mix-blend-mode: screen;
+
+    /* Text styling */
     font: bolder 1em sans-serif;
+    font-size: 0.75em;
     text-align: center;
+    
+    /* Positioning */
     margin: 0;
-    padding: 1em;
+    padding: 0.5em;
+
+    /* Other */
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
 }
+
+.width-50 {
+    max-width: 50%;
+}
+
+.centered {
+    margin: auto;
+    padding-right: 1.75em;
+    padding-left: 1.75em;
+}
+
+.main-grid-text {
+    text-shadow: none;
+}
+
+/*////////////////////////////////////////////  
+            BUTTON BEHAVIOUR
+////////////////////////////////////////////*/
+
+.button-container:hover .button {
+    transform: translateX(1em);
+}
+
+.button-container:hover .arrow {
+    filter: opacity(100%);
+    transform: rotate(-45deg) translate(0.25em, 0.25em);
+    /* -webkit-transform: rotate(-45deg) translateX(1em); */
+}
+
+.button-container:hover .animated-encapsulation::after {
+    transform: scaleX(100%) scaleY(100%);
+}
+
+.button {
+    /* Transitions */
+    transition: 0.2s ease-out;
+}
+
+.blurred-button {
+    transition: 0.1s ease-in-out;
+
+    backdrop-filter: blur(20px) brightness(90%);
+    -webkit-backdrop-filter: blur(20px) brightness(90%);;
+
+    outline: 1px white solid;
+}
+
+.blurred-button:hover {
+    outline-offset: 3px;
+}
+
+
+/*////////////////////////////////////////////  
+                SMALLER SCREENS
+////////////////////////////////////////////*/
+@media screen and (max-width: 992px) {
+    .grid-container {
+        /* Positioning */
+        margin: auto;
+    }
+
+    .subgrid-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    .main-grid-text {
+        text-shadow: 0px 2px 5px rgba(0, 0, 0, 20%);
+    }
+}
+
+

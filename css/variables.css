@@ -2,4 +2,10 @@
     --white: #D7CEC7;
     --tint: #565656;
     --accent: #76323F;
+
+    --blur: blur(10px);
+
+    --large-font: clamp(6rem, 6vw, 12rem);
+    --medium-font: clamp(2.5rem, 1.5vw, 3rem);
+    --small-font: clamp(2rem, 1vw, 2rem);
 }
