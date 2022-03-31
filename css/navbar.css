@@ -1,0 +1,63 @@
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1em;
+    /* background: rgba(1, 1, 1, 0.05); */
+}
+
+ul {
+    /* Flex */
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+
+    position: relative;
+
+    list-style: none;
+    text-decoration: none;
+}
+
+li {
+    /* Flex */
+    position: relative;
+    border-radius: 5px;
+}
+
+.nav-interactable {
+    cursor: pointer;
+}
+
+.nav-interactable::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+    background: white;
+
+    /* Animations */
+    transform-origin: center;
+    transform: scaleX(0%);
+    transition: 0.15s ease-out;
+}
+
+li > img {
+    width: 2em;
+}
+
+/* Animations */
+.nav-interactable:hover::after {
+    background: red !important;
+    transform: scaleX(100%);
+
+}
+
+/* Tooltip */
+li:hover .nav-tooltip {
+    filter: opacity(100%) !important;
+}

@@ -1,0 +1,29 @@
+.grid-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2em;
+
+    margin: auto;
+    margin-left: 20%;
+    padding: auto;
+    justify-content: center;
+    align-self: center;
+}
+
+.text-container {
+    background: transparent center;
+    background-size: contain;
+    margin: 0;
+    padding: 0;
+}
+
+.inverted-text {
+    color: black;
+    border: 4px solid;
+    background: white;
+    mix-blend-mode: screen;
+    font: bolder 1em sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 1em;
+}

@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100vw;
+    background: var(--white);
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+main {
+    background: url(../images/Background.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+
+    display: flex;
+    align-content: center;
+}
+
+.background {
+    position: fixed;
+    right: 0;
+    z-index: -10;
+}
