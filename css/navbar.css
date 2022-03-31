@@ -121,6 +121,7 @@ li:hover .nav-tooltip {
     .hideable-content-nav {
         opacity: 0%;
         user-select: none;
+        position: absolute;
     }
     
     .nav-interactable {
@@ -129,5 +130,9 @@ li:hover .nav-tooltip {
 
     .link {
         pointer-events: none; 
+    }
+
+    .hamburger-button {
+
     }
 }
