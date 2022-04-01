@@ -1,9 +1,34 @@
+.nav-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+
+    z-index: 1; 
+    pointer-events: none;
+
+    transition: filter 0.2s ease-in-out;
+    filter: opacity(0%);
+    background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 50%));
+}
+
+.nav-background-toggle {
+    background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 50%));
+    filter: opacity(100%) !important;
+}
+
 nav {
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     min-width: 100%;
+
+    transition: 0.25s ease-in-out;
+    box-shadow: 0 4px 35px rgba(0, 0, 0, 0%);
+
+    z-index: 100;
 }
 
 ul {
@@ -17,8 +42,9 @@ ul {
 
     width: 100%;
     
-    margin: 2em;
-    margin-inline: 3em;
+    margin: 1em;
+    margin-right: 3em;
+    margin-left: 3em;
     position: relative;
 
     list-style: none;
@@ -49,7 +75,7 @@ li {
     /* Animations */
     transform-origin: center;
     transform: scaleX(0%);
-    transition: 0.15s ease-out;
+    transition: 0.25s ease-in-out;
 }
 
 /* Animations */
@@ -65,6 +91,17 @@ li:hover .nav-tooltip {
 /*////////////////////////////////////////////  
                 SPECIAL CLASSES
 ////////////////////////////////////////////*/
+.nav-extend-background {
+    background-image: linear-gradient(0deg, transparent 10%, rgba(0, 0, 0, 90%) 40%) !important;
+}
+
+.decrease-text-after-scroll {
+    --small-font: clamp(1rem, 0.75vw, 3rem);
+    --medium-font: clamp(1rem, 1vw, 3rem);
+    background-color: rgba(0, 0, 0, 75%);
+    box-shadow: 0 4px 35px rgba(0, 0, 0, 75%);
+}
+
 .nav-right {
     margin-right: 0;
     margin-left: 0;
@@ -74,35 +111,56 @@ li:hover .nav-tooltip {
     margin-left: 0;
 }
 
+.transition {
+    transition: 0.25s ease-in-out;
+}
+
+/*////////////////////////////////////////////  
+            HAMBURGER BUTTON
+////////////////////////////////////////////*/
+
 .hamburger-button {
     margin-top: auto;
     margin-bottom: auto;
-    width: clamp(2em, 4vw, 3.5em);
-    filter: invert(100%);
+    padding: 0.25em;
+    width: clamp(3em, 2vw, 3.5em);
     cursor: pointer;
+
+    display: none;
+
+    transition: 0.2s ease-in-out;
 }
 
-.delay-1 {
-    transition: 0.2s ease-in-out 0ms;
+.segment-1 {
+    transition: 0.25s ease-in-out 0ms;
+    transform-origin: top left;
+
 }
 
-.delay-2 {
-    transition: 0.2s ease-in-out 50ms;
+.segment-2 {
+    transition: 0.25s ease-in-out 50ms;
+    transform-origin: center;
 }
 
-.delay-3 {
-    transition: 0.2s ease-in-out 100ms;
+.segment-3 {
+    transition: 0.25s ease-in-out 100ms;
+    transform-origin: bottom left;
 }
 
-.hamburger-segment {
-    width: 100%;
+.segment-1-closed { transform: translateY(-0.5em) translateX(1em) rotate(45deg); }
+
+.segment-2-closed { transform: translateX(3em); filter: opacity(0%); }
+
+.segment-3-closed { transform: translateY(0.5em) translateX(1em) rotate(-45deg); }
+
+.hamburger-segment { width: 100%; }
+
+.hamburger-button:hover .hamburger-segment { 
+    /* height: 8px;  */
+    fill: black;
 }
 
-.hamburger-button:hover .hamburger-segment {
-    transform: translateY(6px);
-    height: 7px;
-}
-
+.hamburger-button:hover { background-color: white; }
 
 .hideable-content-nav {
     display: grid;
@@ -116,6 +174,10 @@ li:hover .nav-tooltip {
 @media screen and (max-width: 992px) {
     ul {
         flex-grow: 1;
+    }
+
+    .hamburger-button {
+        display: initial;
     }
 
     .hideable-content-nav {
@@ -132,7 +194,15 @@ li:hover .nav-tooltip {
         pointer-events: none; 
     }
 
-    .hamburger-button {
+    .decrease-text-after-scroll {
+        background-color: transparent;
+        box-shadow: none;
+        --medium-font: clamp(1.5rem, 1.5vw, 3rem);
+        --small-font: clamp(1.25rem, 1.25vw, 2rem);
+    }
 
+    .nav-background {
+        filter: opacity(100%);
+        background-image: linear-gradient(0deg, transparent 85%, rgba(0, 0, 0, 100%) 90%);
     }
 }

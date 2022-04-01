@@ -1,7 +1,8 @@
 .grid-container {
     /* Init */
     display: grid;
-    grid-template-rows: repeat(3, minmax(0px,  auto));
+    /* grid-template-rows: repeat(2, minmax(0px,  auto)); */
+    grid-template-columns: 1fr;
     gap: 0.5em;
 
     /* Positioning */
@@ -19,20 +20,7 @@
 .subgrid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1em;
-}
-
-.text-container {
-    /* Init */
-    background: transparent center;
-    background-size: contain;
-
-    /* Positioning */
-    margin: 0;
-    padding: 0;
-
-    /* Text styling */
-    font-weight: normal;
+    gap: 0.5em;
 }
 
 /*////////////////////////////////////////////  
@@ -46,31 +34,39 @@
     mix-blend-mode: screen;
 
     /* Text styling */
-    font: bolder 1em sans-serif;
-    font-size: 0.75em;
     text-align: center;
     
     /* Positioning */
-    margin: 0;
-    padding: 0.5em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
 
     /* Other */
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
+    cursor: pointer;
+}
+
+.inverted-on-hover:hover {
+    /* Init */
+    color: black;
+    background: white;
+    mix-blend-mode: screen;
 }
 
 .width-50 {
-    max-width: 50%;
+    min-width: 100%;
 }
 
 .centered {
     margin: auto;
-    padding-right: 1.75em;
-    padding-left: 1.75em;
 }
 
 .main-grid-text {
     text-shadow: none;
+}
+
+.grid-flex-size {
+    flex-basis: 1;
 }
 
 /*////////////////////////////////////////////  
@@ -97,12 +93,21 @@
 }
 
 .blurred-button {
+    position: relative;
+    display: flex;
     transition: 0.1s ease-in-out;
+    height: 100%;
+    cursor: pointer;
 
     backdrop-filter: blur(20px) brightness(90%);
     -webkit-backdrop-filter: blur(20px) brightness(90%);;
 
     outline: 1px white solid;
+    outline-offset: -1px;
+}
+
+.blurred-button p {
+    margin: auto;
 }
 
 .blurred-button:hover {
@@ -122,7 +127,7 @@
     .subgrid-2 {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1em;
+        gap: 0.5em;
     }
 
     .main-grid-text {

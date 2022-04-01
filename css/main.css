@@ -12,6 +12,7 @@ body {
     background: var(--white);
     font-family: 'Oswald', sans-serif;
     color: white;
+
     overflow-x: hidden;
 }
 
@@ -22,18 +23,93 @@ a {
     transition: 0.25s ease-out;
 }
 
+p {
+    z-index: 100;
+}
+
+h1,
+p,
+a,
+svg {
+    user-select: none;
+}
+
 main {
+    /* background: none; */
     background: url(../images/Background.jpeg);
     background-size: cover;
     background-attachment: fixed;
     min-height: 100vh;
+    perspective: 2px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    /* pointer-events: none; */
 
     display: flex;
+    position: relative;
     align-content: center;
 }
 
-.background {
-    position: fixed;
+.section-2 {
+    min-height: 100vh;
+}
+
+/*////////////////////////////////////////////  
+            BACKGROUND & PARALLAX
+////////////////////////////////////////////*/
+
+.section-1 {
+    display: flex;
+    position: relative;
+    transform-style: preserve-3d;
+
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.parallax::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
     right: 0;
-    z-index: -10;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.55);
+    background-size: cover;
+    z-index: -1;
+  }
+
+.background::after {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)), url(../images/Background.jpeg);
+    background-size: cover;
+    z-index: -1;
+}
+
+/*////////////////////////////////////////////  
+                SCROLLBAR
+////////////////////////////////////////////*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: white;
+    mix-blend-mode: multiply;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    mix-blend-mode: multiply;
+    background: darkslategray;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    mix-blend-mode: multiply;
+    background: darkslategray;
 }

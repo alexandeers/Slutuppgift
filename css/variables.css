@@ -6,6 +6,6 @@
     --blur: blur(10px);
 
     --large-font: clamp(6rem, 6vw, 12rem);
-    --medium-font: clamp(2.5rem, 1.5vw, 3rem);
-    --small-font: clamp(2rem, 1vw, 2rem);
+    --medium-font: clamp(1.5rem, 1.5vw, 3rem);
+    --small-font: clamp(1.25rem, 1.25vw, 2rem);
 }

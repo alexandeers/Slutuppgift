@@ -47,13 +47,21 @@
 }
 
 /*////////////////////////////////////////////  
+                SIMPLE CLASSES
+////////////////////////////////////////////*/
+
+
+
+/*////////////////////////////////////////////  
                     GRID
 ////////////////////////////////////////////*/
 
 .large-text { font-size: var(--large-font);  display: inline; line-height: 1; }
 .medium-text { font-size: var(--medium-font); }
 .small-text { font-size: var(--small-font); }
-.light-text { font-weight: lighter;}
+
+.light { font-weight: lighter;}
+.bold { font-weight: bolder; }
 
 
 .pos-bottom { margin: auto 0 0 0 !important; }
