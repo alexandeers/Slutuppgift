@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/grid.css">
 
     <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <script src="js/navbar.js"></script>
 
@@ -24,56 +25,79 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;0,700;1,200;1,300;1,500;1,700&display=swap"
+        rel="stylesheet">
+
 </head>
+
 <body>
     <div class="nav-background">
     </div>
-        <nav>
-            <ul class="navbar-ul">
-                <li class="nav-left">
-                    <h1 class="medium-text light text-shadow-small transition">ED's BURGERS</h1>
-                </li>
+    
+    <nav>
+        <ul>
+            <li class="nav-left">
+                <h1 class="medium-text transition">ED's BURGERS</h1>
+            </li>
 
-                <div class="hideable-content-nav">
-                    <li class="nav-right nav-interactable">
-                        <a href="https://www.google.se" target="blank" class="light small-text link">ABOUT</a>
-                    </li>
-                    <li class="nav-right nav-interactable">
-                        <a href="https://www.google.se" target="blank" class="light small-text link">CONTACT</a>
-                    </li>
-                </div>
+            <div class="hideable-content-nav">
+                <li class="nav-interactable selected">
+                    <a href="https://www.google.se" target="blank" class="normal nav-text link">HOME</a>
+                </li>
+                <li class="nav-interactable">
+                    <a href="https://www.google.se" target="blank" class="normal nav-text link">MENU</a>
+                </li>
+                <li class="nav-interactable">
+                    <a href="https://www.google.se" target="blank" class="normal nav-text link">ABOUT</a>
+                </li>
+                <li class=" nav-interactable">
+                    <a href="https://www.google.se" target="blank" class="normal nav-text link">CONTACT</a>
+                </li>
+            </div>
+
+            <div class="hamburger-container">
                 <svg viewBox="0 0 110 65" width="40" height="40" class="hamburger-button" onclick="ToggleNavbar()">
                     <defs>
                         <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="100%" style="stop-color:rgb(255, 255, 255);stop-opacity:1" />
-                          <stop offset="0%" style="stop-color:rgb(177, 177, 177);stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:rgb(255, 255, 255);stop-opacity:1" />
+                            <stop offset="0%" style="stop-color:rgb(177, 177, 177);stop-opacity:1" />
                         </linearGradient>
-                      </defs>
-                    <rect fill="url(#grad1)" y="0"  width="100" height="5" class="hamburger-segment segment-1"></rect>
+                    </defs>
+                    <rect fill="url(#grad1)" y="0" width="100" height="5" class="hamburger-segment segment-1"></rect>
                     <rect fill="url(#grad1)" y="30" width="100" height="5" class="hamburger-segment segment-2"></rect>
                     <rect fill="url(#grad1)" y="60" width="100" height="5" class="hamburger-segment segment-3"></rect>
                 </svg>
-            </ul>
-        </nav>
+            </div>
+        </ul>
+    </nav>
+
     <main>
-        <!-- <section class="parallax background section-1"> -->
-            <div class="grid-container">
-                <p class="large-text pos-top main-grid-text">Hi, I'm Ed.</p>
-                
-                <div class="subgrid-2">
-                    <div class="centered width-50">
-                        <p class="inverted-text grid-flex-size small-text bold">MENU</p>
-                    </div>
-                    
-                    <div class="centered width-50 blurred-button inverted-on-hover">
-                        <p class="light small-text">CHEFS</p>
-                    </div>
+        <!-- <div class="section-wrapper"> -->
+            <!-- <section class="parallax background section-1"></section> -->
+        <!-- </div> -->
+
+        <div class="grid-container">
+            <p class="small-text light underline fit-content">INTRODUCTION</p>
+            <p class="large-text pos-top">Hi, I'm Ed.</p>
+
+            <div class="subgrid-2">
+                <div class="width-50">
+                    <p class="inverted-text grid-flex-size small-text bold">MENU</p>
+                </div>
+
+                <div class="width-50 blurred-button inverted-on-hover">
+                    <p class="light small-text">CHEFS</p>
                 </div>
             </div>
-        <!-- </section> -->
+        </div>
     </main>
 
     <section class="section-2"></section>
-
+    <section class="section-3"></section>
 </body>
+
 </html>

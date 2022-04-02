@@ -9,8 +9,8 @@
     pointer-events: none;
 
     transition: filter 0.2s ease-in-out;
-    filter: opacity(0%);
-    background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 50%));
+    filter: opacity(100%);
+    background-image: linear-gradient(0deg, transparent 80%, rgba(0, 0, 0, 65%));
 }
 
 .nav-background-toggle {
@@ -24,7 +24,6 @@ nav {
     top: 0;
     left: 0;
     min-width: 100%;
-
     transition: 0.25s ease-in-out;
     box-shadow: 0 4px 35px rgba(0, 0, 0, 0%);
 
@@ -42,10 +41,11 @@ ul {
 
     width: 100%;
     
-    margin: 1em;
-    margin-right: 3em;
+    margin: 1.5em;  
     margin-left: 3em;
+    margin-right: 3em;
     position: relative;
+    z-index: 100;
 
     list-style: none;
     text-decoration: none;
@@ -56,26 +56,12 @@ li {
     position: relative;
     border-radius: 5px;
     margin: auto;
+    z-index: 100;
 }
 
 .nav-interactable {
     cursor: pointer;
-}
-
-.nav-interactable::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-    height: 2px;
-    background: white;
-
-    /* Animations */
-    transform-origin: center;
-    transform: scaleX(0%);
-    transition: 0.25s ease-in-out;
+    z-index: 100;
 }
 
 /* Animations */
@@ -91,15 +77,11 @@ li:hover .nav-tooltip {
 /*////////////////////////////////////////////  
                 SPECIAL CLASSES
 ////////////////////////////////////////////*/
-.nav-extend-background {
-    background-image: linear-gradient(0deg, transparent 10%, rgba(0, 0, 0, 90%) 40%) !important;
-}
-
 .decrease-text-after-scroll {
     --small-font: clamp(1rem, 0.75vw, 3rem);
     --medium-font: clamp(1rem, 1vw, 3rem);
-    background-color: rgba(0, 0, 0, 75%);
-    box-shadow: 0 4px 35px rgba(0, 0, 0, 75%);
+    background-color: var(--white);
+    color: var(--black);
 }
 
 .nav-right {
@@ -112,7 +94,21 @@ li:hover .nav-tooltip {
 }
 
 .transition {
-    transition: 0.25s ease-in-out;
+    transition: font-size 0.2s ease-in-out;
+}
+
+.selected {
+    outline: 1px solid;
+    outline-color: var(--white);
+    outline-offset: 0.75em;
+    border-radius: 0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.black-text {
+    color: var(--black) !important;
+    outline-color: var(--black) !important;
 }
 
 /*////////////////////////////////////////////  
@@ -147,24 +143,24 @@ li:hover .nav-tooltip {
     transform-origin: bottom left;
 }
 
-.segment-1-closed { transform: translateY(-0.5em) translateX(1em) rotate(45deg); }
+.segment-1-closed { transform: translateY(-0.5em) translateX(1.75em) rotate(45deg); }
 
-.segment-2-closed { transform: translateX(3em); filter: opacity(0%); }
+.segment-2-closed { transform: translateX(3em); fill: none; opacity: 0;}
 
-.segment-3-closed { transform: translateY(0.5em) translateX(1em) rotate(-45deg); }
+.segment-3-closed { transform: translateY(0.5em) translateX(1.75em) rotate(-45deg); }
 
 .hamburger-segment { width: 100%; }
 
 .hamburger-button:hover .hamburger-segment { 
     /* height: 8px;  */
-    fill: black;
+    fill: var(--black);
 }
 
-.hamburger-button:hover { background-color: white; }
+.hamburger-button:hover { background-color: var(--white); }
 
 .hideable-content-nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    gap: 4.5em;
 }
 
 /*////////////////////////////////////////////  
@@ -201,8 +197,7 @@ li:hover .nav-tooltip {
         --small-font: clamp(1.25rem, 1.25vw, 2rem);
     }
 
-    .nav-background {
-        filter: opacity(100%);
-        background-image: linear-gradient(0deg, transparent 85%, rgba(0, 0, 0, 100%) 90%);
+    .nav-extend-background {
+        background-image: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 90%) 0%) !important;
     }
 }

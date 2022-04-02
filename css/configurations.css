@@ -50,17 +50,26 @@
                 SIMPLE CLASSES
 ////////////////////////////////////////////*/
 
+.fit-content {
+    max-width: fit-content;
+}
 
 
 /*////////////////////////////////////////////  
-                    GRID
+                    TEXT
 ////////////////////////////////////////////*/
 
 .large-text { font-size: var(--large-font);  display: inline; line-height: 1; }
 .medium-text { font-size: var(--medium-font); }
+.nav-text { font-size: var(--nav-font); }
 .small-text { font-size: var(--small-font); }
 
-.light { font-weight: lighter;}
+.italic { font-style: italic; }
+.underline { border-bottom: 2px var(--white) solid; }
+
+.normal { font-weight: 400; }
+.light { font-weight: 300;}
+.lighter { font-weight: lighter;}
 .bold { font-weight: bolder; }
 
 
