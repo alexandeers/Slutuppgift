@@ -27,3 +27,8 @@ $(document).ready(function () {
         scale: 0.9 
     });
 });
+
+function ScrollToWindow(id) {
+    var element = document.getElementById(id);
+    element.scrollIntoView(true);
+}

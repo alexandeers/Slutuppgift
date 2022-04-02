@@ -63,9 +63,14 @@
 .medium-text { font-size: var(--medium-font); }
 .nav-text { font-size: var(--nav-font); }
 .small-text { font-size: var(--small-font); }
+.smaller-text { font-size: var(--smaller-font); }
 
 .italic { font-style: italic; }
-.underline { border-bottom: 2px var(--white) solid; }
+.underline { 
+    border-bottom: solid; 
+    border-width: 2px;
+    border-color: inherit;
+}
 
 .normal { font-weight: 400; }
 .light { font-weight: 300;}

@@ -15,21 +15,19 @@
     <link rel="stylesheet" href="css/tooltip.css">
     <link rel="stylesheet" href="css/configurations.css">
     <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/description.css">
 
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <script src="js/navbar.js"></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;0,700;1,200;1,300;1,500;1,700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;0,700;1,200;1,300;1,500;1,700&family=Quicksand&display=swap"
         rel="stylesheet">
 
 </head>
@@ -37,7 +35,7 @@
 <body>
     <div class="nav-background">
     </div>
-    
+
     <nav>
         <ul>
             <li class="nav-left">
@@ -77,7 +75,7 @@
 
     <main>
         <!-- <div class="section-wrapper"> -->
-            <!-- <section class="parallax background section-1"></section> -->
+        <!-- <section class="parallax background section-1"></section> -->
         <!-- </div> -->
 
         <div class="grid-container">
@@ -89,15 +87,62 @@
                     <p class="inverted-text grid-flex-size small-text bold">MENU</p>
                 </div>
 
-                <div class="width-50 blurred-button inverted-on-hover">
-                    <p class="light small-text">CHEFS</p>
+                <div class="width-50 blurred-button inverted-on-hover" onclick="ScrollToWindow('about-us')">
+                    <p class="light small-text">PROCEED</p>
                 </div>
             </div>
         </div>
     </main>
 
-    <section class="section-2"></section>
-    <section class="section-3"></section>
-</body>
+    <section class="section-2" id="about-us">
+        <div class="description-container">
+            <img class="description-image"
+                src="https://nationaltoday.com/wp-content/uploads/2021/07/shutterstock_1518533924-min.jpg" alt=""
+                srcset="">
 
+            <div class="description-divison">
+                <p class="tip">About us</p>
+                <h2 class="description-header medium-text">Nice to have you here!</h2>
+                <p class="description-text smaller-text light">
+                    I’m ED. I love two things, burgers and my bike. I’ve tried thousands of burgers all
+                    over the States. The best ones are the ones I make together with my friends, on my grill and on my
+                    porch.
+                    Now, it’s your turn. Bring your friends, have a bite and a cool beer.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-3" id="about-us">
+        <div class="description-container">
+            <div class="description-divison">
+                <p class="tip">Om oss</p>
+                <h2 class="description-header medium-text"> Välkommen till Ed's Burgers</h2>
+                <p class="description-text smaller-text light">
+
+                    Ed's Burgers är en hamburgarresturang i Norrtälje stad. Våra hamburgare är gjorda på närproducerad
+                    och färskt kött. Våra burgare är smakrika och näringsrika, så du kommer inte lämna oss med kurrande
+                    mage.
+                </p>
+            </div>
+            <img class="description-image image-ed"
+                src="https://www.edsburgers.se/wp-content/uploads/2020/09/ed2.png" alt=""
+                srcset="">
+        </div>
+    </section>
+
+    <section class="section-3" id="about-us">
+        <div class="description-container description-image-background">
+            <div class="description-divison">
+                <p class="tip">About us</p>
+                <h2 class="description-header medium-text"> Välkommen till Ed's Burgers</h2>
+                <p class="description-text smaller-text light">
+                    Ed's Burgers är en hamburgarresturang i Norrtälje stad. Våra hamburgare är gjorda på närproducerad
+                    och färskt kött. Våra burgare är smakrika och näringsrika, så du kommer inte lämna oss med kurrande
+                    mage.
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
 </html>
