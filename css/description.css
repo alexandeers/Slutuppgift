@@ -14,11 +14,30 @@
 
 .description-divison {
     display: flex;
+    position: relative;
     align-content: center;
     margin: auto;
     /* margin-top: 10%; */
     flex-direction: column;
     gap: 2em;
+}
+
+.border-left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5em;
+    height: 100%;
+    border-left: 2px solid var(--black);
+}
+
+.border-right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0em;
+    height: 100%;
+    border-right: 2px solid var(--black);
 }
 
 .description-text {

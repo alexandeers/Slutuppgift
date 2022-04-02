@@ -82,6 +82,13 @@
 /*////////////////////////////////////////////  
             BUTTON BEHAVIOUR
 ////////////////////////////////////////////*/
+.comment-button {
+    max-width: fit-content;
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
+    padding-inline: 2em;
+    margin: auto;
+}
 
 .blurred-button {
     position: relative;

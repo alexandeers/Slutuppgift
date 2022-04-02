@@ -12,6 +12,9 @@
     --nav-font: clamp(1.25rem, 0.5vw, 1.5rem);
 
     --white: whitesmoke;
-    --white-2: #e7e7e1;
-    --black: #0E0B16;
+    --white-2: rgb(240, 236, 231);
+    /* --black: #0E0B16; */
+    --black: #353535;
+
+    --comments-bg: rgb(150, 133, 143, 0.99);
 }

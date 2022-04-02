@@ -57,18 +57,34 @@ main {
     align-content: center;
 }
 
+footer {
+    min-height: 25vh;
+    background-color: var(--black);
+}
+
+
+
 /*////////////////////////////////////////////  
-            "UNOFFICIAL" CLASSES 
+            SECTIONS
 ////////////////////////////////////////////*/
 
-.section-2 {
+section {
     min-height: 50vh;
+}
+
+.section-2 {
     background: var(--white-2);
 }
 
 .section-3 {
-    min-height: 50vh;
     background: var(--white);
+}
+
+.section-comments {
+    /* background: var(--comments-bg); */
+    background-image: linear-gradient(0deg, var(--comments-bg), var(--comments-bg)), url("../images/Seamless Shapes.png");
+    background-repeat: repeat;
+    background-size: contain;
 }
 
 /*////////////////////////////////////////////  
