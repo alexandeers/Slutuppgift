@@ -10,12 +10,7 @@
 
     transition: filter 0.2s ease-in-out;
     filter: opacity(100%);
-    background-image: linear-gradient(0deg, transparent 80%, rgba(0, 0, 0, 65%));
-}
-
-.nav-background-toggle {
-    background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 50%));
-    filter: opacity(100%) !important;
+    /* background-image: linear-gradient(0deg, transparent 95%, rgba(0, 0, 0, 65%)); */
 }
 
 nav {
@@ -25,7 +20,7 @@ nav {
     left: 0;
     min-width: 100%;
     transition: 0.25s ease-in-out;
-    box-shadow: 0 4px 35px rgba(0, 0, 0, 0%);
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0%);
 
     z-index: 100;
 }
@@ -82,6 +77,7 @@ li:hover .nav-tooltip {
     --medium-font: clamp(1rem, 1vw, 3rem);
     background-color: var(--white);
     color: var(--black);
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 5%);
 }
 
 .nav-right {
@@ -156,6 +152,11 @@ li:hover .nav-tooltip {
     fill: var(--black);
 }
 
+.hamburger-button-black .hamburger-segment {
+    fill: black !important;
+    background: none !important;
+}
+
 .hamburger-button:hover { background-color: var(--white); }
 
 .hideable-content-nav {
@@ -171,7 +172,7 @@ li:hover .nav-tooltip {
     ul {
         flex-grow: 1;
     }
-
+    
     .hamburger-button {
         display: initial;
     }
@@ -191,10 +192,8 @@ li:hover .nav-tooltip {
     }
 
     .decrease-text-after-scroll {
-        background-color: transparent;
+        background-color: white;
         box-shadow: none;
-        --medium-font: clamp(1.5rem, 1.5vw, 3rem);
-        --small-font: clamp(1.25rem, 1.25vw, 2rem);
     }
 
     .nav-extend-background {

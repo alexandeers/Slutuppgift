@@ -33,7 +33,7 @@
 .inverted-text {
     /* Init */
     color: var(--black);
-    background: var(--white);
+    /* background: var(--white); */
     mix-blend-mode: screen;
 
     /* Text styling */
@@ -43,10 +43,21 @@
     padding-top: 0.25em;
     padding-bottom: 0.25em;
 
+    background-image: linear-gradient(to left, #96858F, var(--white));
+    background-size: 300% 100%;
+    outline: 0px solid white;
+    outline-offset: 0px;
+    transition: 0.1s ease-in-out;
+
     /* Other */
-    backdrop-filter: var(--blur);
-    -webkit-backdrop-filter: var(--blur);
     cursor: pointer;
+}
+
+.inverted-text:hover {
+    transform: scale(0.99);
+    outline: 1px solid white;
+    outline-offset: 3px;
+    background-position: 50% 0%;
 }
 
 .inverted-on-hover:hover {
@@ -61,10 +72,6 @@
     flex-basis: 1;
 }
 
-.centered {
-    margin: auto;
-}
-
 .main-grid-text {
     text-shadow: none;
     padding: none;
@@ -72,18 +79,9 @@
     pointer-events: none;
 }
 
-.grid-flex-size {
-    flex-basis: 1;
-}
-
 /*////////////////////////////////////////////  
             BUTTON BEHAVIOUR
 ////////////////////////////////////////////*/
-
-.button {
-    /* Transitions */
-    transition: 0.2s ease-out;
-}
 
 .blurred-button {
     position: relative;
