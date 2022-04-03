@@ -16,5 +16,5 @@
     /* --black: #0E0B16; */
     --black: #353535;
 
-    --comments-bg: rgb(150, 133, 143, 0.99);
+    --comments-bg: rgba(122, 100, 113, 0.99);
 }

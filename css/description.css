@@ -35,7 +35,7 @@
     content: "";
     position: absolute;
     top: 0;
-    right: 0em;
+    right: -5em;
     height: 100%;
     border-right: 2px solid var(--black);
 }
@@ -59,6 +59,7 @@
     width: 80%;
     height: auto;
     filter: sepia(25%) grayscale(25%);
+    margin: auto;
 }
 
 /*////////////////////////////////////////////  
