@@ -21,6 +21,7 @@
 
     <!-- Javascript -->
     <script type="text/json" src="data/menu.json"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js" integrity="sha512-kVlGhj2qFy+KBCFuvjBJTGUMxbdqJKs4yK2jh0e0VPhWUPiPC87bzm4THmaaIee3Oj7j6sDpTTgm2EPPiESqBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
@@ -127,24 +128,35 @@
     <section class="section-3" id="menuApp">
         <h2 class="section-header">VÅR MENY</h2>
 
-        <select v-model="category">
-            <option disabled value="">Please select one</option>
-            <option v-bind:value="menu.burgers">Burgers</option>
-            <option v-bind:value="menu.sides">Sides</option>
-            <option v-bind:value="menu.dips">Dips</option>
-        </select>
+        <input type="radio" id="category-burger" v-bind:value="menu.burgers" v-model="category" />
+        <label for="category-burger">Burgers</label>
+
+        <input type="radio" id="category-sides" v-bind:value="menu.sides" v-model="category" />
+        <label for="category-sides">Sides</label>
+
+        <input type="radio" id="category-dips" v-bind:value="menu.dips" v-model="category" />
+        <label for="category-dips">Dips</label>
+
+        <!-- <form v-model="category"> -->
+            <!-- <button type="button" disabled value=""                                 >Please select one</button> -->
+            <!-- <button type="button" v-bind:value="menu.burgers"   v-model="category"  >Burgers</button> -->
+            <!-- <button type="button" v-bind:value="menu.sides"     v-model="category"  >Sides</button> -->
+            <!-- <button type="button" v-bind:value="menu.dips"      v-model="category"  >Dips</button> -->
+        <!-- </form> -->
         <span style="color: black;">Selected: {{ category.name }}</span>
 
         <div class="menu-container">
             <div class="menu-category">
                 <h3 class="menu-header"> {{category.name}} </h3>
-                    <div class="menu-item" v-for="item in category.types">
+                <transition-group appear @before-enter="beforeEnter" @enter="enter">
+                    <div class="menu-item" v-for="(item, index) in category.types" :data-index="index" :key="category" >
                         <header class="item-header">
                             <h4> {{ item.name }} </h4>
                             <p> {{ item.price }} </p>
                         </header>
-                    <p class="item-description"> {{ item.description }} </p>
-                </div>
+                        <p class="item-description"> {{ item.description }} </p>
+                    </div>
+                </transition-group>
             </div>
 
             <div class="menu-category">

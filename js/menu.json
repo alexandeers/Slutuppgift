@@ -98,31 +98,37 @@
         "name": "Sides",
         "types": [
             {
+                "id": "0", 
                 "name": "Pommes med smält ost och jalapeños",
                 "price": "52kr"
             },
             
             {
+                "id": "1", 
                 "name": "Sallad",
                 "price": "35kr"
             },
             
             {
+                "id": "2",
                 "name": "Lökringar",
                 "price": "35kr"
             },
 
             {
+                "id": "3",
                 "name": "Coleslaw",
                 "price": "28kr"
             },
 
             {
+                "id": "4",
                 "name": "Sötpommes",
                 "price": "35kr"
             },
 
             {
+                "id": "5",
                 "name": "Pommes",
                 "price": "28kr"
             }
@@ -132,31 +138,37 @@
         "name": "Dips", 
         "types": [
             {
+                "id": "0",
                 "name": "Guacamole",
                 "price": "28kr"
             },
 
             {
+                "id": "1",
                 "name": "Smält cheddarost",
                 "price": "18kr"
             },
 
             {
+                "id": "2",
                 "name": "Chévre créme",
                 "price": "18kr"
             },
 
             {
+                "id": "3",
                 "name": "Tryffelmajonnäs",
                 "price": "18kr"
             },
 
             {
+                "id": "4",
                 "name": "Barbeque",
                 "price": "18kr"
             },
 
             {
+                "id": "5",
                 "name": "Aioli",
                 "price": "18kr"
             }
