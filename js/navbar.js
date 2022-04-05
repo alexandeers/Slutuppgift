@@ -21,14 +21,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-
-$(document).ready(function () {
-    var image = document.getElementsByClassName('background');
-    new simpleParallax(image, {
-        scale: 0.9 
-    });
-});
-
 function ScrollToWindow(id) {
     var element = document.getElementById(id);
     element.scrollIntoView(true);

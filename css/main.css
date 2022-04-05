@@ -2,17 +2,13 @@
             OFFICIAL TAGS
 ////////////////////////////////////////////*/
 
-*,
-*::after,
-*::before {
+*, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 html,
 body {
@@ -34,52 +30,33 @@ a {
     transition: 0.25s ease-out;
 }
 
-h1,
-p,
-a,
-svg {
-    user-select: none;
-}
+h1, p, a, svg { user-select: none; }
 
 main {
     /* background: none; */
-    background: url(../images/Background.jpeg);
+    background: var(--main-background);
     background-size: cover;
     background-attachment: fixed;
     background-position: top;
-    min-height: 90vh;
+    min-height: var(--main-min-width);
 
     overflow: hidden;
-
-    /* pointer-events: none; */
-
     display: flex;
     position: relative;
     align-content: center;
 }
 
-footer {
-    min-height: 25vh;
-    background-color: var(--black);
-}
-
-
+footer { min-height: 25vh; background-color: var(--black); }
 
 /*////////////////////////////////////////////  
             SECTIONS
 ////////////////////////////////////////////*/
 
-section {
-    min-height: 50vh;
-}
+section { min-height: 50vh; }
 
-.section-2 {
-    background: var(--white-2);
-}
+.section-2 { background: var(--white-2); }
 
-.section-3 {
-    background: var(--white);
-}
+.section-3 { background: var(--white); }
 
 .section-comments {
     /* background: var(--comments-bg); */
@@ -88,39 +65,8 @@ section {
     background-size: contain;
 }
 
-/*////////////////////////////////////////////  
-            BACKGROUND & PARALLAX (NOT USED)
-////////////////////////////////////////////*/
-
-.section-wrapper {
-    position: relative;
-}
-
-.section-1 {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100vw;
-    min-height: 100vw;
-}
-
-.parallax::after {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: translateZ(-1px) scale(1.55);
-    background-size: cover;
-    z-index: -1;
-  }
-
-.background::after {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)), url(../images/Background.jpeg);
-    background-size: cover;
-    z-index: 0;
+.section-header {
+    font-size: calc(var(--medium-font) * 1.5);
 }
 
 /*////////////////////////////////////////////  
@@ -154,7 +100,7 @@ section {
 
 @media screen and (max-width: 992px) {
     main {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/Background.jpeg);
+        background: var(--mobile-background);
         background-size: cover;
     }
 }

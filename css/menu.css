@@ -1,0 +1,93 @@
+.menu-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    -webkit-gap: 5em;
+
+    padding: 6em;
+    padding-right: 20%;
+    padding-left: 20%;
+    min-height: 50vh;
+
+    color: var(--black);
+}
+
+.menu-category {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1;
+    flex-grow: 1;
+    flex-wrap: wrap;
+
+    font-size: var(--medium-font);
+    max-width: 50%;
+}
+
+.menu-header {
+    position: relative;
+    text-align: center;
+}
+
+.menu-item {
+    margin-top: 0.65em;
+}
+
+.menu-header::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+
+    height: 1px;
+    width: 100%;
+    background-color: var(--black);
+}
+
+.item-header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 1;
+    margin: auto;
+}
+
+.item-header h4 {
+    font-size: calc(var(--medium-font) * 0.55);
+    font-weight: bold;
+    margin: auto;
+    margin-bottom: 0.1em;
+    margin-left: 0;
+}
+
+.item-header p {
+    font-size: calc(var(--small-font) * 0.55);
+    font-style: italic;
+    font-weight: 300;
+    margin: auto;
+    margin-right: 0;
+}
+
+
+.item-description {
+    position: relative;
+    font-size: calc(var(--small-font) * 0.55);
+    font-style: italic;
+    font-weight: 300;
+    padding-right: 15%;
+}
+
+/*////////////////////////////////////////////  
+                SMALLER SCREENS
+////////////////////////////////////////////*/
+@media screen and (max-width: 992px) {
+    .menu-container {
+        padding-top: 5em;
+        padding-left: 5%;
+        padding-right: 5%;
+        justify-content: center;
+    }
+
+    .menu-category {
+        max-width: 100%;
+    }
+}
