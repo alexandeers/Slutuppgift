@@ -1,13 +1,5 @@
-import { createApp } from 'vue'
+import { createApp, ref, computed, reactive } from 'vue'
 import menujson from "./menu.json" assert { type: "json" };
-// import { gsap } from '../gsap-public/minified/gsap.min.js'
-// import { gsap } from 'gsap'
-
-// fetch("js/menu.json")  
-// .then(response => response.json())
-// .then(json => 
-//     this.menu = json
-// );
       
 createApp({
 	data() {
@@ -29,9 +21,13 @@ createApp({
 			gsap.to(el, {
 				opacity: 1,
 				y: 0,
-				duration: 1,
-				delay: el.dataset.index*0.1
+				duration: 0.75,
+				delay: el.dataset.index*0.15
 			});
 		}
+	},
+
+	computed: {
+
 	}
 }).mount('#menuApp');

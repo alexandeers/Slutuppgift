@@ -58,6 +58,16 @@ section { min-height: 50vh; }
 
 .section-3 { background: var(--white); }
 
+.section-menu { 
+    --white: #353535;
+    --black: whitesmoke;
+    --background: 93, 108, 133;
+    /* #825B5B */
+    background-image: linear-gradient(0deg, rgb(var(--background), 0.97), rgb(var(--background), 0.97)), url("../images/Seamless_Shapes_2I.jpg");
+    background-size: auto;
+    background-repeat: repeat;
+}
+
 .section-comments {
     /* background: var(--comments-bg); */
     background-image: linear-gradient(0deg, var(--comments-bg), var(--comments-bg)), url("../images/Seamless Shapes.png");
@@ -65,8 +75,40 @@ section { min-height: 50vh; }
     background-size: contain;
 }
 
-.section-header {
+.section-header h2 {
     font-size: calc(var(--medium-font) * 1.5);
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-header img {
+    margin: auto;
+    margin-top: -11em;
+    margin-bottom: -16em;
+    filter: grayscale(100%) invert(100%) brightness(1000%) opacity(95%);
+    width: 50em;
+}
+
+.section-shadow {
+    box-shadow: inset 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/*////////////////////////////////////////////  
+                OTHER
+////////////////////////////////////////////*/
+
+input[type=radio] {
+    border: 1px solid #fff;
+    padding: 0.5em;
+    -webkit-appearance: none;
+}
+
+input[type=radio]:checked {
+    background: whitesmoke no-repeat center center;
+    background-size: 9px 9px;
 }
 
 /*////////////////////////////////////////////  

@@ -58,16 +58,16 @@
 
             <div class="hideable-content-nav">
                 <li class="nav-interactable">
-                    <a href="index.html" class="normal nav-text link">HOME</a>
+                    <a href="index.html" class="nav-text link">HOME</a>
                 </li>
                 <li class="nav-interactable selected">
-                    <a href="menu.html" class="normal nav-text link">MENU</a>
+                    <a href="menu.html" class="nav-text link">MENU</a>
                 </li>
                 <li class="nav-interactable">
-                    <a href="https://www.google.se" target="blank" class="normal nav-text link">CONTACT</a>
+                    <a href="https://www.google.se" target="blank" class="nav-text link">CONTACT</a>
                 </li>
                 <li class=" nav-interactable">
-                    <a href="https://www.google.se" target="blank" class="normal nav-text link">SOCIAL</a>
+                    <a href="https://www.google.se" target="blank" class="nav-text link">SOCIAL</a>
                 </li>
             </div>
 
@@ -125,29 +125,28 @@
         </div>
     </section>
 
-    <section class="section-3" id="menuApp">
-        <h2 class="section-header">VÅR MENY</h2>
+    <section class="section-menu section-shadow" id="menuApp">
 
-        <input type="radio" id="category-burger" v-bind:value="menu.burgers" v-model="category" />
-        <label for="category-burger">Burgers</label>
-
-        <input type="radio" id="category-sides" v-bind:value="menu.sides" v-model="category" />
-        <label for="category-sides">Sides</label>
-
-        <input type="radio" id="category-dips" v-bind:value="menu.dips" v-model="category" />
-        <label for="category-dips">Dips</label>
-
-        <!-- <form v-model="category"> -->
-            <!-- <button type="button" disabled value=""                                 >Please select one</button> -->
-            <!-- <button type="button" v-bind:value="menu.burgers"   v-model="category"  >Burgers</button> -->
-            <!-- <button type="button" v-bind:value="menu.sides"     v-model="category"  >Sides</button> -->
-            <!-- <button type="button" v-bind:value="menu.dips"      v-model="category"  >Dips</button> -->
-        <!-- </form> -->
-        <span style="color: black;">Selected: {{ category.name }}</span>
+        <div class="section-header">   
+            <h2>VÅR MENY</h2>
+            <img src="images/Embellishment.png" alt="">
+        </div>
 
         <div class="menu-container">
-            <div class="menu-category">
-                <h3 class="menu-header"> {{category.name}} </h3>
+            <div class="menu-header">
+                <input type="radio" id="category-burger" v-bind:value="menu.burgers" v-model="category" />
+                <label for="category-burger">BURGERS</label>
+        
+                <input type="radio" id="category-sides" v-bind:value="menu.sides" v-model="category" />
+                <label for="category-sides">SIDES</label>
+        
+                <input type="radio" id="category-dips" v-bind:value="menu.dips" v-model="category" />
+                <label for="category-dips">DIPS</label>
+
+                <!-- <input type="search" name="Query Menu" id="menuSearchBar" v-model="menuQuery">
+                <label for="menuSearchBar"> {{menuQuery}} </label> -->
+            </div>
+            <div class="menu-category"> 
                 <transition-group appear @before-enter="beforeEnter" @enter="enter">
                     <div class="menu-item" v-for="(item, index) in category.types" :data-index="index" :key="category" >
                         <header class="item-header">
@@ -157,17 +156,6 @@
                         <p class="item-description"> {{ item.description }} </p>
                     </div>
                 </transition-group>
-            </div>
-
-            <div class="menu-category">
-                <h3 class="menu-header"> Sides </h3>
-                    <div class="menu-item" v-for="item in menu.sides">
-                        <header class="item-header">
-                            <h4> {{ item.name }} </h4>
-                            <p> {{ item.price }} </p>
-                        </header>
-                    <p class="item-description"> {{ item.description }} </p>
-                </div>
             </div>
         </div>   
     </section>
