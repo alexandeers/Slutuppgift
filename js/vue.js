@@ -1,4 +1,4 @@
-import { createApp, ref, computed, reactive } from 'vue'
+import { createApp } from 'vue'
 import menujson from "./menu.json" assert { type: "json" };
       
 createApp({
@@ -25,9 +25,5 @@ createApp({
 				delay: el.dataset.index*0.15
 			});
 		}
-	},
-
-	computed: {
-
 	}
 }).mount('#menuApp');
