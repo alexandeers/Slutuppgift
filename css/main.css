@@ -52,7 +52,7 @@ footer { min-height: 25vh; background-color: var(--black); }
             SECTIONS
 ////////////////////////////////////////////*/
 
-section { min-height: 50vh; }
+section { min-height: 50vh; } 
 
 .section-2 { background: var(--white-2); }
 
