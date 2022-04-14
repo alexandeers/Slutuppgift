@@ -3,8 +3,9 @@ function ToggleNavbar() {
     $(".segment-2").toggleClass("segment-2-closed");
     $(".segment-3").toggleClass("segment-3-closed");
     $(".hamburger-button").toggleClass("hamburger-button-closed");
+    $(".hideable-content-nav").toggleClass("toggle-display");
 
-    $(".nav-background").toggleClass("nav-extend-background");
+    $(".nav-background").toggleClass("nav-toggle-background");
 }
 
 window.addEventListener('scroll', function() {

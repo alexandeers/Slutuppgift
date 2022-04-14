@@ -91,6 +91,13 @@
             "name": "Big Al",
             "description": "Chipotlemajonnäs, krispsallad, silverlök, vitlökskorv och cheddarost.", 
             "price": "126/146kr" 
+        },
+
+        { 
+            "id":"12", 
+            "name": "Chokladburgare",
+            "description": "Coiwngiowneiognw", 
+            "price": "126/146kr" 
         }
         ]
     },

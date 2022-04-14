@@ -46,7 +46,48 @@ main {
     align-content: center;
 }
 
-footer { min-height: 25vh; background-color: var(--black); }
+footer { 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 5em;
+
+    min-height: 30vh; 
+    background-color: var(--black); 
+    color: var(--white);
+}
+
+.footer-container {
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));   */
+    min-height: 30vh;
+    width: 100%;  
+    margin: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: min(10%, 10em);
+    padding: 1em;
+    justify-content: center;
+    justify-items: center;
+}
+
+.footer-container div {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    /* text-align: center; */
+}
+footer h2 {
+    font-size: var(--medium-font);
+    width: fit-content;
+    /* margin-block: auto; */
+    /* margin-top: 0; */
+}
+
+footer p {
+    font-style: italic;
+    width: fit-content;
+}
 
 /*////////////////////////////////////////////  
             SECTIONS

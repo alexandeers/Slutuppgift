@@ -1,4 +1,5 @@
 .nav-background {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -6,12 +7,11 @@
     min-width: 100vw;
 
     z-index: 1; 
-    pointer-events: none;
 
     transition: filter 0.2s ease-in-out;
-    filter: opacity(100%);
+    background-image: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 90%) 0%) !important;
+    
 }
-
 nav {
     display: flex;
     position: fixed;
@@ -115,6 +115,9 @@ li:hover .nav-tooltip {
 
 .transition { transition: font-size 0.2s ease-in-out; }
 
+.toggle-display {
+    display: flex !important;
+}
 
 .selected {
     outline: 1px solid;
@@ -145,7 +148,8 @@ li:hover .nav-tooltip {
 
 .segment-1 {
     transition: 0.25s ease-in-out 0ms;
-    transform-origin: top left;
+    /* transform-origin: top left; */
+    transform-origin: center;
 
 }
 
@@ -156,14 +160,15 @@ li:hover .nav-tooltip {
 
 .segment-3 {
     transition: 0.25s ease-in-out 100ms;
-    transform-origin: bottom left;
+    /* transform-origin: bottom left; */
+    transform-origin: center;
 }
 
-.segment-1-closed { transform: translateY(-0.5em) translateX(1.75em) rotate(45deg); }
+.segment-1-closed { transform: translateY(2em) translateX(-1.9em) rotate(45deg); }
 
 .segment-2-closed { transform: translateX(3em); fill: none; opacity: 0;}
 
-.segment-3-closed { transform: translateY(0.5em) translateX(1.75em) rotate(-45deg); }
+.segment-3-closed { transform: translateY(-2em) translateX(-1.9em) rotate(-45deg); }
 
 .hamburger-segment { width: 100%; }
 
@@ -190,9 +195,23 @@ li:hover .nav-tooltip {
     }
 
     .hideable-content-nav {
-        opacity: 0%;
+        display: none;
+        opacity: 100%;
         user-select: none;
         position: absolute;
+        top: 10em;
+        left: calc(50% - 3em);
+        flex-direction: column;
+        color: white !important;
+    }
+
+    .black-text {
+        color: white !important;
+        outline-color: white !important;
+    }
+
+    li {
+        margin: auto;
     }
     
     .nav-interactable {
@@ -200,7 +219,7 @@ li:hover .nav-tooltip {
     }
 
     .link {
-        pointer-events: none; 
+        /* pointer-events: none;  */
     }
 
     .decrease-text-after-scroll {
@@ -208,7 +227,7 @@ li:hover .nav-tooltip {
         box-shadow: none;
     }
 
-    .nav-extend-background {
-        background-image: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 90%) 0%) !important;
+    .nav-toggle-background {
+        display: block;
     }
 }
