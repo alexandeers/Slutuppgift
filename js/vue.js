@@ -1,7 +1,7 @@
-import { createApp } from 'vue'
+// import { createApp } from 'vue'
 import menujson from "./menu.json" assert { type: "json" };
       
-createApp({
+Vue.createApp({
 	data() {
 		return {
 			menu: menujson,
