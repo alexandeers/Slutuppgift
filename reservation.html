@@ -9,7 +9,7 @@
     <title>Ed's Burgers</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/variables-menu.css">
+    <link rel="stylesheet" href="css/variables-reservation.css">
     <link rel="stylesheet" href="css/configurations.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/main.css">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/description.css">
     <link rel="stylesheet" href="css/comments.css">
-    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/reservation.css">
 
     <!-- Javascript -->
     <script type="text/json" src="data/menu.json"></script>
@@ -61,14 +61,14 @@
                 <li class="nav-interactable">
                     <a href="index.html" class="nav-text link">HOME</a>
                 </li>
-                <li class="nav-interactable selected">
+                <li class="nav-interactable">
                     <a href="menu.html" class="nav-text link">MENU</a>
                 </li>
                 <li class="nav-interactable">
                     <a href="https://www.google.se" target="blank" class="nav-text link">CONTACT</a>
                 </li>
-                <li class=" nav-interactable">
-                    <a href="reservation.html" target="blank" class="nav-text link">RESERVATIONS</a>
+                <li class=" nav-interactable selected">
+                    <a href="reservation.html" class="nav-text link">RESERVATIONS</a>
                 </li>
             </div>
 
@@ -90,8 +90,8 @@
 
     <main>
         <div class="grid-container">
-            <p class="small-text light underline fit-content">BROWSE</p>
-            <p class="large-text pos-top">Ed's Menu</p>
+            <p class="small-text light underline fit-content">BOOK A TABLE</p>
+            <p class="large-text pos-top">Reservation</p>
 
             <div class="subgrid-2">
                 <div class="width-50 background-hover-shift">
@@ -102,63 +102,18 @@
     </main>
 
     <section class="section-2" id="about-us">
-        <div class="description-container">
-            <img class="description-image" src="images/PäronShake.jpg" alt="" srcset="">
-
-            <div class="description-divison border-left">
-                <p class="tip">Om våra burgare</p>
-                <h3 class="description-header medium-text">Vårt kött och bröd</h3>
-                <p class="description-text smaller-text light">
-                    Ed’s burgare görs för hand av egenmald färs, som vi
-                    maler varje dag, på hängmörat nötkött från svenska
-                    gårdar. Då vet vi att djurhållningen är schysst. Då
-                    blir köttet fint och smakar bra. Ed gillar den klassiska
-                    enkla amerikanska hamburgaren, dvs inte för mycket
-                    tjafs, det är färsen som ska ge smak. Burgernörd som
-                    Ed är innebär att beef-to-bun relationen är viktig,
-                    förhållandet mellan köttet och burgaren måste vara
-                    rätt. Därför är våra enkelburgare 140 g och en dubbel
-                    innebär 2x100 g. Vårt bröd får vi från ett litet bageri.
-                    Det är gjort så att det suger smaken så där lagom.
-                    Vill du ha glutenfritt? Det grejar vi. Fråga personalen.
-                </p>
-            </div>
+        <div class="reservation-container"> 
+            <form class="r-form">
+                <div>
+                    <label for="first-name">First name:</label><br>
+                    <input type="text" id="first-name" name="first-name" value="John">
+                </div>
+                <div>
+                    <label for="last-name">Last name:</label><br>
+                    <input type="text" id="last-name" name="last-name" value="Doe">
+                </div>
+            </form>
         </div>
-    </section>
-
-    <section class="section-menu section-shadow" id="menuApp">
-
-        <div class="section-header">   
-            <h2>VÅR MENY</h2>
-            <img src="images/Embellishment_Cropped.png" alt="">
-        </div>
-
-        <div class="menu-container">
-            <div class="menu-header">
-                <input type="radio" id="category-burger" v-bind:value="menu.burgers" v-model="category" />
-                <label for="category-burger">BURGERS</label>
-        
-                <input type="radio" id="category-sides" v-bind:value="menu.sides" v-model="category" />
-                <label for="category-sides">SIDES</label>
-        
-                <input type="radio" id="category-dips" v-bind:value="menu.dips" v-model="category" />
-                <label for="category-dips">DIPS</label>
-
-                <!-- <input type="search" name="Query Menu" id="menuSearchBar" v-model="menuQuery">
-                <label for="menuSearchBar"> {{menuQuery}} </label> -->
-            </div>
-            <div class="menu-category"> 
-                <transition-group appear @before-enter="beforeEnter" @enter="enter">
-                    <div class="menu-item" v-for="(item, index) in category.types" :data-index="index" :key="category" >
-                        <header class="item-header">
-                            <h4> {{ item.name }} </h4>
-                            <p> {{ item.price }} </p>
-                        </header>
-                        <p class="item-description"> {{ item.description }} </p>
-                    </div>
-                </transition-group>
-            </div>
-        </div>   
     </section>
 
     <footer>

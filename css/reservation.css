@@ -1,0 +1,39 @@
+.reservation-container {
+    display: flex;
+    justify-content: center;
+    min-height: inherit;
+
+    color: var(--black);
+    font-size: var(--medium-font);
+    font-weight: lighter;
+}
+
+.r-form {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin: 10em auto auto auto;
+    height: 100%;
+}
+
+.r-form input {
+    position: relative;
+
+    font-size: var(--small-font);
+    font-weight: lighter;
+
+    border: none;
+    background-color: transparent;
+}
+
+.r-form input::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+
+    width: 100px;
+    height: 10px;
+    background: black;
+    border-bottom: 1px solid black;
+}

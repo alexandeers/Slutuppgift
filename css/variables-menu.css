@@ -20,9 +20,7 @@
 
     /* Other configurations */
     --main-min-width: 50vh;
-    /* --main-background: url("https://www.santosgrills.de/grill-magazin/wp-content/uploads/2021/09/Pommes-Frites-vom-Drehspiess.jpg"); */
     --main-background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../images/Fries_2.jpg");
     --mobile-background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)), url("../images/Fries_2.jpg");
-    /* --mobile-background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/Fries_2.jpg"); */
-    /* --main-background: url("https://www.santamariaworld.com/optimized/maximum/globalassets/foodservice/recipes/handy-bites/handy-bites-chicken_n_chips.jpg"); */
+    --background-offset: top;
 }

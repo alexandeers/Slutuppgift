@@ -37,7 +37,7 @@ main {
     background: var(--main-background);
     background-size: cover;
     background-attachment: fixed;
-    background-position: top;
+    background-position: var(--background-offset);
     min-height: var(--main-min-width);
 
     overflow: hidden;
@@ -48,7 +48,7 @@ main {
 
 footer { 
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: flex-start;
     padding-top: 5em;
 
