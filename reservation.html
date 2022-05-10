@@ -28,15 +28,9 @@
         integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <script src="js/navbar.js"></script>
     <script src="js/general.js"></script>
-    <!-- <script type="importmap">
-        {
-          "imports": {
-            "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
-          }
-        }
-      </script> -->
     <script src="https://unpkg.com/vue@3"></script>
     <script src="js/vue.js" type="module"></script>
+    <script src="js/firebase.js" type="module"></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,17 +96,27 @@
     </main>
 
     <section class="section-2" id="about-us">
-        <div class="reservation-container"> 
-            <form class="r-form">
+        <div class="reservation-container" id="reservation-app"> 
+            <form class="r-form" id="reservation-form">
                 <div>
-                    <label for="first-name">First name:</label><br>
-                    <input type="text" id="first-name" name="first-name" value="John">
-                </div>
-                <div>
-                    <label for="last-name">Last name:</label><br>
-                    <input type="text" id="last-name" name="last-name" value="Doe">
-                </div>
+                    <div class="r-row">
+                        <input required type="text" id="first-name" name="first-name" placeholder="First Name">
+                        <input required type="text" id="last-name" name="last-name" placeholder="Last Name">
+                    </div>
+                    <div class="r-row">
+                        <input required type="date" id="date">
+                        <input type="submit" value="Submit" v-on:click="Reserve()">
+                    </div>
+                </div>  
             </form>
+            
+            <div class="occupied-reservation-container" id="reservations" :key="trigger">
+                <h2 class="r-header">Occupied Dates</h2>
+                <div v-for="(item, index) in dates" :data-index="index" :key="index">
+                    <p class="r-name">{{item.firstname + " " + item.surname}}</p>
+                    <p class="r-date r-name"> {{item.date}} </p>
+                </div>
+            </div>
         </div>
     </section>
 
