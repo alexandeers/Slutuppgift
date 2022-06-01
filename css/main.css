@@ -57,6 +57,10 @@ footer {
     color: var(--white);
 }
 
+.complete-background-cover {
+    background: linear-gradient(to right, rgb(53, 53, 53, 0.95), rgb(53, 53, 53, 0.95)), url("../images/Seamless_Shapes_2I.jpg");
+}
+
 .footer-container {
     display: flex;
     /* grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));   */
@@ -75,8 +79,16 @@ footer {
     display: flex;
     width: fit-content;
     flex-direction: column;
-    /* text-align: center; */
+    gap: 1em;
 }
+
+.footer-container img {
+    width: calc(var(--medium-font) * 1.5);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
 footer h2 {
     font-size: var(--medium-font);
     width: fit-content;
@@ -111,8 +123,7 @@ section { min-height: 50vh; }
 }
 
 .section-comments {
-    /* background: var(--comments-bg); */
-    background-image: linear-gradient(0deg, var(--comments-bg), var(--comments-bg)), url("../images/Seamless Shapes.png");
+    background: transparent !important;
     background-repeat: repeat;
     background-size: contain;
 }

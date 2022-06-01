@@ -19,9 +19,6 @@
 }
 
 .subgrid-2 {
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr; */
-
     display: flex;
     gap: 0.5em;
 }
